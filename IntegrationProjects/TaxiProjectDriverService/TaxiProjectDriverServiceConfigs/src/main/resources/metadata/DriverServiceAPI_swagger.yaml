@@ -1,0 +1,89 @@
+openapi: 3.0.1
+info:
+  title: DriverServiceAPI
+  description: API Definition of DriverServiceAPI
+  version: v1
+servers:
+- url: /driver
+security:
+- default: [
+    ]
+paths:
+  /drivers:
+    get:
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+  /addDriver:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+  /driver/{driverId}:
+    get:
+      parameters:
+      - name: driverId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: string
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+    post:
+      parameters:
+      - name: driverId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: string
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: {
+            }

@@ -1,0 +1,11 @@
+---
+key: "DriverServiceAPI-v1"
+name : "DriverServiceAPI"
+displayName : "DriverServiceAPI"
+description: "Sample API"
+version: "v1"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/driver"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"
