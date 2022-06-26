@@ -1,0 +1,6 @@
+[package]
+distribution = "2201.1.0"
+
+[build-options]
+observabilityIncluded = false
+cloud = "k8s"
