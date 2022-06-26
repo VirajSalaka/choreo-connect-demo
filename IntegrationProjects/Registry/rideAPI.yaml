@@ -1,0 +1,116 @@
+openapi: 3.0.1
+info:
+  title: RideServiceAPI
+  description: API Definition of RideServiceAPI
+  version: v1
+servers:
+- url: /ride
+security:
+- default: [
+    ]
+paths:
+  /rideDetails/{rideId}:
+    get:
+      parameters:
+      - name: rideId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: string
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+    post:
+      parameters:
+      - name: rideId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: string
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+  /addRide:
+    post:
+      parameters: [
+        ]
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+  /rideDetailsSummary:
+    get:
+      parameters: [
+        ]
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+  /calculateCost:
+    get:
+      parameters:
+      - name: distance
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: waitingTimeInMin
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: ok
+      security:
+      - default: [
+          ]
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: {
+            }

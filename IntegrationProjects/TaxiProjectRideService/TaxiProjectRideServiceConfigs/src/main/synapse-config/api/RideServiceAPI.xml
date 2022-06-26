@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/ride" name="RideServiceAPI" publishSwagger="/_system/governance/swagger_files/rideAPI.yaml" version="v1" version-type="context" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/rideDetails/{rideId}">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <property expression="get-property('uri.var.rideId')" name="rideId" scope="default" type="STRING"/>
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/rideDetails/{rideId}">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <property expression="get-property('uri.var.rideId')" name="rideId" scope="default" type="STRING"/>
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" url-mapping="/addRide">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" url-mapping="/rideDetailsSummary">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" url-mapping="/calculateCost">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

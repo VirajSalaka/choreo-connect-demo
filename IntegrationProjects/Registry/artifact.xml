@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="rideAPI_yaml" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>rideAPI.yaml</file>
+            <path>/_system/governance/swagger_files</path>
+            <mediaType>application/yaml</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+</artifacts>

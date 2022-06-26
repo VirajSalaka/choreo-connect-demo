@@ -1,0 +1,11 @@
+---
+key: "RideServiceAPI-v1"
+name : "RideServiceAPI"
+displayName : "RideServiceAPI"
+description: "Sample API"
+version: "v1"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/ride"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"
