@@ -4,6 +4,7 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
+            <property expression="get-property('Accept')" name="acceptHeaderProperty" scope="default" type="STRING"/>
             <payloadFactory media-type="json">
                 <format>{"Response" : "Sample Response"}</format>
                 <args/>
@@ -11,7 +12,20 @@
             <loopback/>
         </inSequence>
         <outSequence>
-            <respond/>
+            <filter regex="application/xml" source="get-property('acceptHeaderProperty')">
+                <then>
+                    <payloadFactory media-type="xml" template-type="freemarker">
+                        <format><![CDATA[<user>
+			    							<Name>${payload.Response}</Name>
+			    							</user>]]></format>
+                        <args/>
+                    </payloadFactory>
+                    <respond/>
+                </then>
+                <else>
+                    <respond/>
+                </else>
+            </filter>
         </outSequence>
         <faultSequence/>
     </resource>
