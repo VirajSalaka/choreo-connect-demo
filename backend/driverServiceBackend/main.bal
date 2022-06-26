@@ -48,7 +48,7 @@ service /driver on new http:Listener(9000) {
             };
     }
 
-    resource function post driver/[string driverId] () returns json {
+    resource function post driver/[string driverId] (@http:Payload json payload) returns json {
         return {
                 driverId: driverId,
                 status: "unavailable",

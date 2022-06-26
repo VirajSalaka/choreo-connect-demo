@@ -3,20 +3,19 @@ info:
   title: DriverServiceAPI
   version: v1
 servers:
-  - url: /
+  - url: /driver
 security:
   - default: []
 paths:
   /drivers:
     get:
-      parameters:
-        - name: City
-          in: query
-          required: true
-          style: form
-          explode: true
-          schema:
-            type: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+  /addDriver:
+    post:
       responses:
         '200':
           description: ok
@@ -48,14 +47,6 @@ paths:
           schema:
             type: string
             format: string
-      responses:
-        '200':
-          description: ok
-      security:
-        - default: []
-  /driver:
-    post:
-      parameters: []
       responses:
         '200':
           description: ok

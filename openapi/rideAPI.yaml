@@ -3,40 +3,10 @@ info:
   title: RideServiceAPI
   version: v1
 servers:
-  - url: /
+  - url: /ride
 security:
   - default: []
 paths:
-  '/ridesPerUser/{userId}':
-    get:
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          style: simple
-          explode: false
-          schema:
-            type: string
-            format: string
-        - name: startDate
-          in: query
-          required: false
-          style: form
-          explode: true
-          schema:
-            type: integer
-        - name: endDate
-          in: query
-          required: true
-          style: form
-          explode: true
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: ok
-      security:
-        - default: []
   '/rideDetails/{rideId}':
     get:
       parameters:
@@ -48,21 +18,59 @@ paths:
           schema:
             type: string
             format: string
-        - name: expand
-          in: query
-          required: false
-          style: form
-          explode: true
-          schema:
-            type: boolean
       responses:
         '200':
           description: ok
       security:
         - default: []
-  /create:
+    post:
+      parameters:
+        - name: rideId
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+  /addRide:
     post:
       parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+  /rideDetailsSummary:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+  '/calculateCost':
+    get:
+      parameters:
+        - name: distance
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+        - name: waitingTimeInMin
+          in: query
+          required: true
+          style: form
+          explode: true
+          schema:
+            type: integer
       responses:
         '200':
           description: ok
