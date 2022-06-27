@@ -7,3 +7,19 @@ spec:
   image: "vsalaka/ride_integration:1.0.0-SNAPSHOT"
   deploySpec:
     minReplicas: 1
+    requestCPU: "500m"
+    reqMemory: "512Mi"
+    cpuLimit: "500m"
+    memoryLimit: "512Mi"
+    livenessProbe:
+      tcpSocket:
+        port: 8290
+      initialDelaySeconds: 30
+      periodSeconds: 10
+  expose:
+    passthroPort: 8290
+    inboundPorts:
+    - 8000
+  env:
+  - name: JVM_MEM_OPTS
+    value: "-Xms256m -Xmx256m"  
