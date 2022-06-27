@@ -5,30 +5,12 @@
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
             <property expression="$trp:accept" name="acceptHeaderProperty" scope="axis2" type="STRING"/>
-            <!-- <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/> -->
-            <call>
+            <send>
                 <endpoint key="DriverServiceBE"/>
-            </call>
+            </send>
         </inSequence>
         <outSequence>
-            <filter regex=".*xml" source="get-property('$ctx.acceptHeaderProperty')">
-                <then>
-                    <payloadFactory media-type="xml" template-type="freemarker">
-                        <format><![CDATA[<user>
-			    							<Name>${payload.Response}</Name>
-			    							</user>]]></format>
-                        <args/>
-                    </payloadFactory>
-                    <respond/>
-                </then>
-                <else>
-                    <respond/>
-                </else>
-            </filter>
+            <respond/>
         </outSequence>
         <faultSequence/>
     </resource>
@@ -61,11 +43,9 @@
             <!--This is generated API skeleton.-->
             <property expression="get-property('uri.var.driverId')" name="driverId" scope="default" type="STRING"/>
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="DriverServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
@@ -77,11 +57,9 @@
             <!--This is generated API skeleton.-->
             <property expression="get-property('uri.var.driverId')" name="driverId" scope="default" type="STRING"/>
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="DriverServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
