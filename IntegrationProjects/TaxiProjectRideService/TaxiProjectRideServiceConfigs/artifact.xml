@@ -8,4 +8,7 @@
     <artifact name="RideServiceAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
         <file>src/main/resources/metadata/RideServiceAPI_metadata.yaml</file>
     </artifact>
+    <artifact name="RideServiceBE" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/RideServiceBE.xml</file>
+    </artifact>
 </artifacts>

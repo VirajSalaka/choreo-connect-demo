@@ -58,12 +58,18 @@
     <profile>
       <id>Kubernetes</id>
       <build />
+      <modules>
+        <module>TaxiProjectRideServiceK8sExporter</module>
+      </modules>
     </profile>
     <profile>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
       <build />
+      <modules>
+        <module>TaxiProjectRideServiceK8sExporter</module>
+      </modules>
     </profile>
   </profiles>
 </project>

@@ -5,11 +5,9 @@
             <!--This is generated API skeleton.-->
             <property expression="get-property('uri.var.rideId')" name="rideId" scope="default" type="STRING"/>
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="RideServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
@@ -21,11 +19,9 @@
             <!--This is generated API skeleton.-->
             <property expression="get-property('uri.var.rideId')" name="rideId" scope="default" type="STRING"/>
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="RideServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
@@ -36,11 +32,9 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="RideServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
@@ -51,11 +45,9 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="RideServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
@@ -66,11 +58,9 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <send>
+                <endpoint key="RideServiceBE"/>
+            </send>
         </inSequence>
         <outSequence>
             <respond/>
