@@ -31,6 +31,14 @@ dependencies = [
 
 [[package]]
 org = "ballerina"
+name = "cloud"
+version = "2.2.0"
+modules = [
+	{org = "ballerina", packageName = "cloud", moduleName = "cloud"}
+]
+
+[[package]]
+org = "ballerina"
 name = "crypto"
 version = "2.2.2"
 dependencies = [
@@ -272,25 +280,13 @@ modules = [
 ]
 
 [[package]]
-org = "ballerinai"
-name = "observe"
-version = "0.0.0"
-dependencies = [
-	{org = "ballerina", name = "jballerina.java"},
-	{org = "ballerina", name = "observe"}
-]
-modules = [
-	{org = "ballerinai", packageName = "observe", moduleName = "observe"}
-]
-
-[[package]]
 org = "virajg"
 name = "driverServiceBackend"
 version = "0.1.0"
 dependencies = [
+	{org = "ballerina", name = "cloud"},
 	{org = "ballerina", name = "http"},
-	{org = "ballerina", name = "uuid"},
-	{org = "ballerinai", name = "observe"}
+	{org = "ballerina", name = "uuid"}
 ]
 modules = [
 	{org = "virajg", packageName = "driverServiceBackend", moduleName = "driverServiceBackend"}

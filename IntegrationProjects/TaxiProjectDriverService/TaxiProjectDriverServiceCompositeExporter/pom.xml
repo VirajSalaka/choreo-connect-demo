@@ -15,6 +15,7 @@
   <description>TaxiProjectDriverServiceCompositeExporter</description>
   <properties>
     <com.example.metadata_._DriverServiceAPI_swagger>capp/EnterpriseServiceBus</com.example.metadata_._DriverServiceAPI_swagger>
+    <com.example.endpoint_._DriverServiceBE>capp/EnterpriseServiceBus</com.example.endpoint_._DriverServiceBE>
     <com.example.resource_._driverAPI_yaml>capp/EnterpriseIntegrator</com.example.resource_._driverAPI_yaml>
     <com.example.api_._DriverServiceAPI>capp/EnterpriseServiceBus</com.example.api_._DriverServiceAPI>
     <com.example.metadata_._DriverServiceAPI_metadata>capp/EnterpriseServiceBus</com.example.metadata_._DriverServiceAPI_metadata>
@@ -26,6 +27,12 @@
       <artifactId>DriverServiceAPI_swagger</artifactId>
       <version>1.0.0</version>
       <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>DriverServiceBE</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.resource</groupId>

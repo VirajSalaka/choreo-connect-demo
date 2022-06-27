@@ -5,11 +5,14 @@
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
             <property expression="$trp:accept" name="acceptHeaderProperty" scope="axis2" type="STRING"/>
-            <payloadFactory media-type="json">
+            <!-- <payloadFactory media-type="json">
                 <format>{"Response" : "Sample Response"}</format>
                 <args/>
             </payloadFactory>
-            <loopback/>
+            <loopback/> -->
+            <call>
+                <endpoint key="DriverServiceBE"/>
+            </call>
         </inSequence>
         <outSequence>
             <filter regex=".*xml" source="get-property('$ctx.acceptHeaderProperty')">
@@ -35,11 +38,9 @@
             <!--Business Logic Goes Here-->
             <filter regex="E" source="json-eval(class)">
                 <then>
-                    <payloadFactory media-type="json">
-                        <format>{"Response" : "Sample Response"}</format>
-                        <args/>
-                    </payloadFactory>
-                    <loopback/>
+                    <send>
+                        <endpoint key="DriverServiceBE"/>
+                    </send>
                 </then>
                 <else>
                     <payloadFactory media-type="json">

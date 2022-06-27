@@ -8,4 +8,7 @@
     <artifact name="DriverServiceAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
         <file>src/main/resources/metadata/DriverServiceAPI_metadata.yaml</file>
     </artifact>
+    <artifact name="DriverServiceBE" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DriverServiceBE.xml</file>
+    </artifact>
 </artifacts>
