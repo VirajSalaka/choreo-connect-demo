@@ -4,7 +4,7 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
-            <property expression="get-property('Accept')" name="acceptHeaderProperty" scope="default" type="STRING"/>
+            <property expression="$trp:accept" name="acceptHeaderProperty" scope="axis2" type="STRING"/>
             <payloadFactory media-type="json">
                 <format>{"Response" : "Sample Response"}</format>
                 <args/>
@@ -12,7 +12,7 @@
             <loopback/>
         </inSequence>
         <outSequence>
-            <filter regex="application/xml" source="get-property('acceptHeaderProperty')">
+            <filter regex=".*xml" source="get-property('$ctx.acceptHeaderProperty')">
                 <then>
                     <payloadFactory media-type="xml" template-type="freemarker">
                         <format><![CDATA[<user>
@@ -33,11 +33,22 @@
         <inSequence>
             <!--This is generated API skeleton.-->
             <!--Business Logic Goes Here-->
-            <payloadFactory media-type="json">
-                <format>{"Response" : "Sample Response"}</format>
-                <args/>
-            </payloadFactory>
-            <loopback/>
+            <filter regex="E" source="json-eval(class)">
+                <then>
+                    <payloadFactory media-type="json">
+                        <format>{"Response" : "Sample Response"}</format>
+                        <args/>
+                    </payloadFactory>
+                    <loopback/>
+                </then>
+                <else>
+                    <payloadFactory media-type="json">
+                        <format>{"Response" : "Class E is required in order to register as a driver."}</format>
+                        <args/>
+                    </payloadFactory>
+                    <loopback/>
+                </else>
+            </filter>
         </inSequence>
         <outSequence>
             <respond/>
