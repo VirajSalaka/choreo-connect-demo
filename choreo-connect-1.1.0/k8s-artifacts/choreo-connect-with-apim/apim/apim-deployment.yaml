@@ -40,12 +40,14 @@ spec:
             - "wso2apim"
       containers:
         - name: wso2apim
-          image: wso2/wso2am:4.1.0-alpine
+          image: wso2/wso2am:4.1.0-multiarch
           resources:
             limits:
-              memory: "2Gi"
+              memory: "1.5Gi"
+              cpu: "500m"
             requests:
-              memory: "2Gi"
+              memory: "1.5Gi"
+              cpu: "500m"
           startupProbe:
             exec:
               command:
@@ -72,6 +74,8 @@ spec:
           env:
             - name: PROFILE_NAME
               value: "control-plane"
+            - name: JVM_MEM_OPTS
+              value: "-Xms512m -Xmx1024m"  
           ports:
             - containerPort: 8280
               protocol: "TCP"
