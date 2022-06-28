@@ -2,7 +2,7 @@
 apiVersion: "wso2.com/v1alpha2"
 kind: "Integration"
 metadata:
-  name: "rideservice"
+  name: "rideintegration"
 spec:
   image: "vsalaka/ride_integration:1.0.0-SNAPSHOT"
   deploySpec:
