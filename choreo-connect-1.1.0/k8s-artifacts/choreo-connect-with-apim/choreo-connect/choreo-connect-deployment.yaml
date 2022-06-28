@@ -66,7 +66,7 @@ spec:
             - name: XDS_MAX_RETRIES
               value: "3"
             - name: JAVA_OPTS
-              value: "-Dhttpclient.hostnameVerifier=AllowAll -Xms256m -Xmx256m -XX:MaxRAMFraction=2"
+              value: "-Dhttpclient.hostnameVerifier=AllowAll -Xms256m -Xmx512m -XX:MaxRAMFraction=2"
             - name: apim_admin_pwd
               value: "admin"
             - name: enforcer_admin_pwd
@@ -79,10 +79,10 @@ spec:
               value: ""
           resources:
             requests:
-              memory: "512Mi"
+              memory: "750Mi"
               cpu: "500m"
             limits:
-              memory: "512Mi"
+              memory: "750Mi"
               cpu: "500m"
           ports:
             - containerPort: 8081

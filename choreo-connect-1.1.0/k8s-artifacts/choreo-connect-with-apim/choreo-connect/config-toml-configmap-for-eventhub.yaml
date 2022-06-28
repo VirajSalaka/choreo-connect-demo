@@ -46,8 +46,8 @@ data:
     [router.upstream]
     [router.upstream.tls]
       trustedCertPath = "/etc/ssl/certs/ca-certificates.crt"
-      verifyHostName = true
-      disableSslVerification = false
+      verifyHostName = false
+      disableSslVerification = true
 
     [enforcer]
     [enforcer.jwtIssuer]

@@ -101,11 +101,11 @@ algorithm = "AES"
 # [secrets]
 # secret_key = "[secret value]"
 
-# [[service_catalog]]
-# apim_host = "https://localhost:9443"
-# enable = true
-# username = "admin"
-# password = "admin"
+ [[service_catalog]]
+ apim_host = "https://wso2apim:9443"
+ enable = true
+ username = "admin"
+ password = "admin"
 
 # [dashboard_config]
 # dashboard_url = "https://localhost:9743/dashboard/api/"

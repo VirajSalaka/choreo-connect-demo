@@ -4,7 +4,7 @@ name : "RideServiceAPI"
 displayName : "RideServiceAPI"
 description: "Sample API"
 version: "v1"
-serviceUrl: "https://{MI_HOST}:{MI_PORT}/ride"
+serviceUrl: "http://rideservice-service:8290/ride"
 definitionType: "OAS3"
 securityType: "BASIC"
 mutualSSLEnabled: false
