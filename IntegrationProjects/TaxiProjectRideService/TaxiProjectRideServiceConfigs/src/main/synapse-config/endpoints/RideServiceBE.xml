@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="RideServiceBE" xmlns="http://ws.apache.org/ns/synapse">
-    <http uri-template="http://rideserviceback:9000/ride">
+    <http uri-template="http://ride-backend:9000/ride">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

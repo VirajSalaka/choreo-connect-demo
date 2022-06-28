@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="DriverServiceBE" xmlns="http://ws.apache.org/ns/synapse">
-    <http trace="enable" uri-template="http://driverserviceba:9000/driver">
+    <http trace="enable" uri-template="http://driver-backend:9000/driver">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>
